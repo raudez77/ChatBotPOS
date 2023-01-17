@@ -1,4 +1,4 @@
-SERVER = "Azure"
+SERVER = "OpenAI"
 BASE = ['engine','model']
 UrlBase = "https://seekingalpha.com/"
 Extension = ["latest-articles","market-news"]
