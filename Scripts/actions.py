@@ -138,14 +138,14 @@ def DocEmbedding (corpus:tuple, save_at:str)->dict:
 # Getting Article Step 3.
 # =======================================
 
-def GetArticle(Option:str, Selected:str)-> List[tuple]:
+def GetArticle(Option:str, Selected:str, return_article:bool)-> List[tuple]:
     """ Connect to seeking Apha 
     Scrap and Transform Document 
     
     Parameters:
         Option : str, Latest, Trending
         Selected: str, option selected by user
-        
+        return_article: True, return Article but does not do the embedding
     Return 
         Article : pre-defined Message, List[(text, TotalTokens)] """
 
@@ -172,6 +172,10 @@ def GetArticle(Option:str, Selected:str)-> List[tuple]:
                     
                 # Preprocessing Tokens
                 tmp_section = ProcessingDocuments(tmp_article)
+
+                # Check Condition
+                if return_article:
+                    return tmp_article
 
                 # Create Embeddings
                 Embedding = DocEmbedding(corpus = tmp_section, save_at=save_at)
