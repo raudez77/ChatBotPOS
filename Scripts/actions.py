@@ -245,9 +245,10 @@ def SendingQuestion(Question:str, Mode:str, Doc:str)-> str:
     Keep_Server = core.BASE[1] if core.SERVER.lower() == openai.api_type else core.BASE[0]
     core.ANSWER_PARAMS.pop(Keep_Server, None)
 
-    # OpenChatModel
+    # OpenChatModelc
     if Mode == core.OPTIONS_MODE[0]:
         Statement = core.HEADERS[0] + Doc[1] + core.QATOKENS[0] + Question + core.QATOKENS[3] + core.QATOKENS[1] 
+        print(Statement)
         core.ANSWER_PARAMS['prompt'] = Statement
         _response = openai.Completion.create(**core.ANSWER_PARAMS)
 
