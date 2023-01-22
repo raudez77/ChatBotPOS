@@ -62,3 +62,4 @@ divchatbot_style = {"height": "100%","padding": "7px","border-style": "groove","
 divimg_style = {"height": "100px","width":"100px","border-radius": "5px"}
 divuser_reponse = {'display':'flex', 'margin-top':'5px'}
 divcard_body = {'font-size': '1.23rem','font-weight': '300'}
+divreset_button = {'margin-top':'10px','width':'100%'}
