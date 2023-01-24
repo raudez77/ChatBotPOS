@@ -25,7 +25,7 @@ COMPARING_KEY = ['Data','Text', 'Embeddings']
 
 MarvinLinks = ["https://www.linkedin.com/in/marvin-garcia-917127184/","https://www.upwork.com/freelancers/~010d2ff47a39cfb4dd"]
 GUIDANCE = "This Chatbot is a proof-of-concept that utilizes GPT-3 and lower versions to showcase the capabilities of new technologies. It connects to the financial news website Seeking Alpha and allows users to search for trending news and analysis. The bot offers two options for users - the ability to ask open-ended questions or generate summaries of the articles they select."
-ERROR_MESSAGES = ["There was a Connection Error! Please Contact Marvin"]
+ERROR_MESSAGES = ["There was a Connection Error! Please Contact Marvin", "You have already asked 3 Questions"]
 
 
 # Inline-Blocks-display
@@ -63,3 +63,4 @@ divimg_style = {"height": "100px","width":"100px","border-radius": "5px"}
 divuser_reponse = {'display':'flex', 'margin-top':'5px'}
 divcard_body = {'font-size': '1.23rem','font-weight': '300'}
 divreset_button = {'margin-top':'10px','width':'100%'}
+divChatbotAnswer = {'text-align':'justify','margin':'15px'} 
