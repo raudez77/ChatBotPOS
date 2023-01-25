@@ -8,4 +8,5 @@ config.py
 
 # Ignore Dockerfile 
 Dockerfile
+.Dockerignore
 

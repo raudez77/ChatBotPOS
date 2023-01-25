@@ -1,11 +1,18 @@
 import dash
 import core
 import time
+import os 
+
+
+
 from Scripts.actions import * 
 from dash import html,dcc
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output,State
 from dash.exceptions import PreventUpdate
+
+
+
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], prevent_initial_callbacks=True)
 
 
@@ -77,7 +84,7 @@ DivOption = html.Div(id='div-options', className="p-3 bg-light rounded-3", style
                     ])
                 ])
             ])
-        ]),s
+        ]),
 
     # Reset Button 
     html.A(html.Button("Reset", id="reset-button", className="btn btn-danger", style = core.divreset_button ), href="/") 
@@ -289,4 +296,5 @@ app.layout = html.Div(children=[
     DivMid])
 
 if __name__ == '__main__':
-    app.run_server(debug=False)
+    port = os.environ.get("PORT", 5000)
+    app.run_server(debug=True, host="0.0.0.0", port=port)
