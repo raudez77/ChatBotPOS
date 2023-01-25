@@ -1,0 +1,11 @@
+# Ignoring Embeddings
+Embeddings/*
+Tokenizer/*
+
+# Python Sensible Files
+core.py
+config.py
+
+# Ignore Dockerfile 
+Dockerfile
+
